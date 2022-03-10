@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this._route.paramMap.subscribe( paramMap => {
-      this.authToken = paramMap.get('info');
+      this.authToken = paramMap.get('token');
     });
     }
 
