@@ -25,14 +25,13 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._route.paramMap.subscribe( paramMap => {
-      this.authToken = paramMap.get('token');
+    this._route.queryParams.subscribe( queryParams => {
+      this.authToken = queryParams.token;
     });
     }
 
   boardUser(formValues) {
     formValues.info = this.authToken;
-    console.log('formValues', formValues);
     this._payaQboService.boardUser(formValues)
       .then(res => {
         console.log(res);
