@@ -46,6 +46,7 @@ import {PayaQboService} from './service/paya-qbo.service';
 import {HttpClientModule} from '@angular/common/http';
 import {AlertModule} from 'ngx-bootstrap/alert';
 import {CollapseModule} from 'ngx-bootstrap/collapse';
+import { SuccessComponent } from './views/success/success.component';
 
 @NgModule({
     imports: [
@@ -74,7 +75,8 @@ import {CollapseModule} from 'ngx-bootstrap/collapse';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SuccessComponent
   ],
   providers: [
     {
